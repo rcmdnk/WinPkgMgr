@@ -7,6 +7,30 @@ and you can install packages in the file with one command.
 
 The file can be managed with cloud storage (e.g. Dropbox) or GitHub repository.
 
+# Requirement
+
+* [PackageManagement](https://technet.microsoft.com/en-us/library/mt422622.aspx)
+
+It is pre-installed in Windows 10.
+
+For older Windows version, download PackageManagement PowerShell Modules Preview from
+[Download PackageManagement PowerShell Modules Preview from Official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+
+* Enable to run scripts
+
+Launch PowerShell as administrator ("Run as administrator"),
+and execute:
+
+    > Set-ExecutionPolicy RemoteSigned
+
+> [Set-ExecutionPolicy](https://technet.microsoft.com/ja-jp/library/hh849812.aspx)
+
+
+# Install
+
+Copy/Download [PkgMgr.ps1](https://raw.githubusercontent.com/rcmdnk/WinPkgMgr/master/bin/PkgMgr.ps1)
+and place it in $PATH, or call it directly in PowerShell.
+
 # Usage
 
     PkgMgr.ps1 [[-command] <String>] [[-providers] <Array>] [[-pkgFile] <String>] [[-repo] <String>] [<CommonParameters>]
