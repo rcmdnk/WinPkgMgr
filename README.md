@@ -7,6 +7,29 @@ and you can install packages in the file with one command.
 
 The file can be managed with cloud storage (e.g. Dropbox) or GitHub repository.
 
+# pkg.txt example
+
+    adobereader                    chocolatey
+    autohotkey                     chocolatey
+    autohotkey.install             chocolatey
+    autohotkey.portable            chocolatey
+    Cygwin                         chocolatey
+    dropbox                        chocolatey
+    Evernote                       chocolatey
+    Firefox                        chocolatey
+    flashplayerplugin              chocolatey
+    git                            chocolatey
+    git.install                    chocolatey
+    GoogleChrome                   chocolatey
+    GoogleJapaneseInput            chocolatey
+    lhaplus                        chocolatey
+    MobaXTerm                      chocolatey
+    putty                          chocolatey
+    putty.portable                 chocolatey
+    skype                          chocolatey
+    teamviewer                     chocolatey
+    vim                            chocolatey
+
 # Requirement
 
 * [PackageManagement](https://technet.microsoft.com/en-us/library/mt422622.aspx)
@@ -75,14 +98,18 @@ All packages in the package management file will be installed in your new machin
 
 You can use a cloud storage like Dropbox to synchronize your package management file.
 
+Write out packages:
+
     > PkgMgr.ps1 init -pkgMgr $HOME\Documents\Dropbox\pkg.txt
 
+Install packages:
 
     > PkgMgr.ps1 install -pkgMgr $HOME\Documents\Dropbox\pkg.txt
 
-
 If you execute `update` regularly in several machines,
 all machines can have same packages.
+
+> [Weekend Scripter: Use the Windows Task Scheduler to Run a Windows PowerShell Script | Hey, Scripting Guy! Blog](https://blogs.technet.microsoft.com/heyscriptingguy/2012/08/11/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/)
 
 Or you can set the environment variable.
 Add
@@ -95,9 +122,14 @@ Then, you can use `PkgMgr.ps1` w/o `-pkgMgr`.
 
 ## Manage with GitHub repository
 
-Prepare GitHub repository like WinPkgMgr, which can be empty repository.
+Prepare GitHub repository like [WinPkgMgrFile](https://github.com/rcmdnk/WinPkgMgrFile),
+which can be empty repository.
 
 Prepare your git environment so that you can push your update.
+
+* [Git for Windows](https://git-for-windows.github.io/)
+* [GitHub Desktop - Simple collaboration from your desktop](https://desktop.github.com/)
+* You can also setup ssh-key with [Cygwin](https://www.cygwin.com/).
 
 Then, set a repository like
 
@@ -124,6 +156,8 @@ This will update the repository in GitHub.
 If you execute `update` regularly in several machines,
 all machines can have same packages
 and the repository is kept up-to-date.
+
+> [Weekend Scripter: Use the Windows Task Scheduler to Run a Windows PowerShell Script | Hey, Scripting Guy! Blog](https://blogs.technet.microsoft.com/heyscriptingguy/2012/08/11/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/)
 
 # Full HELP
 
