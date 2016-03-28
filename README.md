@@ -1,6 +1,7 @@
 # WinPkgMgr
 
-Windows Package Manager with [PackageManagement](https://technet.microsoft.com/en-us/library/mt422622.aspx).
+Windows Package Manager with [PackageManagement](https://technet.microsoft.com/en-us/library/mt422622.aspx),
+like [Brew-file](https://github.com/rcmdnk/homebrew-file) for Mac.
 
 Packages are stored in the package management file,
 and you can install packages in the file with one command.
