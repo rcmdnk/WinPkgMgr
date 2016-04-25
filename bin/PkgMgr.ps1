@@ -32,7 +32,7 @@
   .NOTES
   Author  : rcmdnk
   Date    : 26/Apr/2016
-  Version : 0.0.2
+  Version : 0.0.3
   .PARAMETER command
   command (init | install | show | set_repo | pull | push | update)
 
@@ -269,6 +269,10 @@ function Git-Command ($git_command) {
   $dir = "$(Split-Path $pkgCntFile)"
   Push-Location $dir
   Write-Verbose "git $git_command"
+  if($git_command -eq "push"){
+    #git add -A
+    git commit -m "Update the package list"
+  }
   git $git_command
   if(-not $?){
     Write-Error @"
