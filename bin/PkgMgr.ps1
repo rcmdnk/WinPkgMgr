@@ -31,8 +31,8 @@
   https://github.com/rcmdnk/WinPkgMgr
   .NOTES
   Author  : rcmdnk
-  Date    : 13/Mar/2016
-  Version : 0.0.1
+  Date    : 26/Apr/2016
+  Version : 0.0.2
   .PARAMETER command
   command (init | install | show | set_repo | pull | push | update)
 
@@ -310,6 +310,6 @@ switch($command){
   }"update"{
     Update-Packages
   }default{
-    Write-Error "Command '$command' is not available. Use 'init', 'show', 'install' or 'set_repo'"
+    Write-Error "Command '$command' is not available. Use 'init', 'show', 'install', 'set_repo', 'pull', 'push', or 'update'"
   }
 }
