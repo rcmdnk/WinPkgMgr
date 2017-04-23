@@ -314,6 +314,6 @@ switch($command){
   }"update"{
     Update-Packages
   }default{
-    Write-Error "Command '$command' is not available. Use 'init', 'show', 'install', 'set_repo', 'pull', 'push', or 'update'"
+    Write-Warning "Command '$command' is not available. Use 'init', 'show', 'install', 'set_repo', 'pull', 'push', or 'update'"
   }
 }
